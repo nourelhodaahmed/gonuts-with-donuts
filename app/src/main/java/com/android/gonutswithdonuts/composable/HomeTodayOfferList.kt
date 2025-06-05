@@ -138,7 +138,7 @@ private fun FavoriteButton(modifier: Modifier){
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 428)
 @Composable
 private fun HomeTodayOffersListPreview(){
     HomeTodayOffersList(Modifier)

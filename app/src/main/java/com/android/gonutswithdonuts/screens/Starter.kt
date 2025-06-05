@@ -59,13 +59,12 @@ fun Starter(){
                 .offset(y=(27.6).dp)
         )
         Image(
-            painter = painterResource(R.drawable.donut_with_pink_icing),
+            painter = painterResource(R.drawable.donut_with_pink_icing2),
             contentDescription = null,
             modifier = Modifier
-            .size(99.dp)
-            .offset(y = 260.dp)
-            .padding(top = 40.dp)
-            .rotate(70f)
+                .padding(top = 310.dp, start = 30.dp)
+                .width(94.dp)
+                .height(69.dp)
         )
         Image(
             painter = painterResource(R.drawable.purpledonut),
@@ -78,8 +77,9 @@ fun Starter(){
             painter = painterResource(R.drawable.halfdonut),
             contentDescription = null,
             modifier = Modifier
+                .padding(start = 323.dp, top = 388.dp)
+                .width(209.dp)
                 .height(165.dp)
-                .align(Alignment.CenterEnd)
         )
         Text(
             text = "Gonuts with Donuts",
@@ -126,7 +126,7 @@ fun Starter(){
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 428, heightDp = 926)
 @Composable
 fun StarterPreview(){
     Starter()

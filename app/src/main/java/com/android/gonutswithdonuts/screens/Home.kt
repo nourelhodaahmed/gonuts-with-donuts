@@ -64,7 +64,7 @@ fun Home(){
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 428, heightDp = 926)
 @Composable
 private fun HomePreview(){
     Home()

@@ -105,7 +105,7 @@ private fun DonutsPriceItem(donut: Donuts){
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 428)
 @Composable
 private fun HomeDonutsPriceListPreview(){
     HomeDonutsPriceList(Modifier)

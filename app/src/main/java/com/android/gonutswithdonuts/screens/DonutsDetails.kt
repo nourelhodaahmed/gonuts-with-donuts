@@ -78,7 +78,7 @@ private fun FavoriteButton(modifier: Modifier){
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 428, heightDp = 926)
 @Composable
 private fun DonutsDetailsPreview(){
     DonutsDetails()

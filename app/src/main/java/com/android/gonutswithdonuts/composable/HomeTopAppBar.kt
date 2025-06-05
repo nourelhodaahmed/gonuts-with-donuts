@@ -2,6 +2,7 @@ package com.android.gonutswithdonuts.composable
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -29,7 +30,8 @@ import com.android.gonutswithdonuts.ui.theme.text30
 @Composable
 fun HomeTopAppBar(){
     Box(
-        Modifier.padding(bottom = 20.dp)
+        Modifier.fillMaxWidth()
+            .padding(bottom = 20.dp)
     ){
         Text(
             text = "Let’s Gonuts!",
@@ -49,7 +51,11 @@ fun HomeTopAppBar(){
             fontWeight = FontWeight.W400,
             modifier = Modifier.padding(top = 120.dp, start = 16.dp)
         )
-        SearchButton(Modifier.padding(top = 84.dp, start = 321.dp))
+        SearchButton(
+            Modifier
+            .align(Alignment.TopEnd)
+            .padding(top = 84.dp, start = 343.dp, end = 40.dp)
+        )
     }
 }
 
@@ -70,7 +76,7 @@ private fun SearchButton(modifier: Modifier){
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 428, heightDp = 926)
 @Composable
 private fun HomeTopBarPreview(){
     HomeTopAppBar()

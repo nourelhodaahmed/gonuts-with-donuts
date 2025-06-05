@@ -63,7 +63,7 @@ fun DonutsDetailsAddToCardGroup(){
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 428)
 @Composable
 private fun DonutsDetailsAddToCardGroupPreview(){
     DonutsDetailsAddToCardGroup()

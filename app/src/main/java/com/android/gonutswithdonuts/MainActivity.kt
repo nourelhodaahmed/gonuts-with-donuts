@@ -14,8 +14,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             //Starter()
-            DonutsDetails()
-            //Home()
+            //DonutsDetails()
+            Home()
         }
     }
 }
