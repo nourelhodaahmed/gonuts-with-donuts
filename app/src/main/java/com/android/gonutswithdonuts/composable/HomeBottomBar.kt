@@ -2,9 +2,7 @@ package com.android.gonutswithdonuts.composable
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -16,13 +14,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.android.gonutswithdonuts.R
 import com.android.gonutswithdonuts.ui.theme.DarkPink
 import com.android.gonutswithdonuts.ui.theme.getNonScalableFontSize
-import androidx.compose.foundation.layout.Box as Box1
 
 @Composable
 fun HomeBottomBar(){
