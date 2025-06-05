@@ -29,7 +29,11 @@ import com.android.gonutswithdonuts.R
 import com.android.gonutswithdonuts.ui.theme.Background
 import com.android.gonutswithdonuts.ui.theme.DarkPink
 import com.android.gonutswithdonuts.ui.theme.LightPink
+import com.android.gonutswithdonuts.ui.theme.getNonScalableFontSize
 import com.android.gonutswithdonuts.ui.theme.inter
+import com.android.gonutswithdonuts.ui.theme.text18
+import com.android.gonutswithdonuts.ui.theme.text20
+import com.android.gonutswithdonuts.ui.theme.text54
 
 @Composable
 fun Starter(){
@@ -78,12 +82,11 @@ fun Starter(){
                 .height(165.dp)
                 .align(Alignment.CenterEnd)
         )
-
         Text(
             text = "Gonuts with Donuts",
             textAlign = TextAlign.Start,
             color = DarkPink,
-            fontSize = 54.sp,
+            fontSize = getNonScalableFontSize(text54),
             fontFamily = inter,
             maxLines = 4,
             fontWeight = FontWeight.W600,
@@ -95,7 +98,7 @@ fun Starter(){
             text = "Gonuts with Donuts is a Sri Lanka dedicated food outlets for specialize manufacturing of Donuts in Colombo, Sri Lanka.",
             textAlign = TextAlign.Start,
             color = LightPink,
-            fontSize = 18.sp,
+            fontSize = getNonScalableFontSize(text18),
             fontFamily = inter,
             fontWeight = FontWeight.W400,
             modifier = Modifier
@@ -116,7 +119,7 @@ fun Starter(){
                 textAlign = TextAlign.Center,
                 color = Black,
                 maxLines = 1,
-                fontSize = 20.sp,
+                fontSize = getNonScalableFontSize(text20),
                 fontFamily = inter,
                 fontWeight = FontWeight.W500,
             )

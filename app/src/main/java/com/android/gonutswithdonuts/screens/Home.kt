@@ -42,7 +42,14 @@ import com.android.gonutswithdonuts.data.todayOffersData
 import com.android.gonutswithdonuts.ui.theme.Background
 import com.android.gonutswithdonuts.ui.theme.Black60pre
 import com.android.gonutswithdonuts.ui.theme.DarkPink
+import com.android.gonutswithdonuts.ui.theme.getNonScalableFontSize
 import com.android.gonutswithdonuts.ui.theme.inter
+import com.android.gonutswithdonuts.ui.theme.text12
+import com.android.gonutswithdonuts.ui.theme.text14
+import com.android.gonutswithdonuts.ui.theme.text16
+import com.android.gonutswithdonuts.ui.theme.text20
+import com.android.gonutswithdonuts.ui.theme.text22
+import com.android.gonutswithdonuts.ui.theme.text30
 
 @Composable
 fun Home(){
@@ -57,7 +64,7 @@ fun Home(){
                     text = "Let’s Gonuts!",
                     textAlign = TextAlign.Start,
                     color = DarkPink,
-                    fontSize = 30.sp,
+                    fontSize = getNonScalableFontSize(text30),
                     fontFamily = inter,
                     fontWeight = FontWeight.W500,
                     modifier = Modifier.padding(top = 81.dp, start = 16.dp)
@@ -66,7 +73,7 @@ fun Home(){
                     text = "Order your favourite donuts from here",
                     textAlign = TextAlign.Start,
                     color = Black60pre,
-                    fontSize = 14.sp,
+                    fontSize = getNonScalableFontSize(text14),
                     fontFamily = inter,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier.padding(top = 120.dp, start = 16.dp)
@@ -77,7 +84,7 @@ fun Home(){
                     text = "Today Offers",
                     textAlign = TextAlign.Start,
                     color = Black,
-                    fontSize = 20.sp,
+                    fontSize = getNonScalableFontSize(text20),
                     fontFamily = inter,
                     fontWeight = FontWeight.W500,
                     modifier = Modifier.padding(top = 191.dp, start = 16.dp)
@@ -87,7 +94,7 @@ fun Home(){
                     text = "Donuts",
                     textAlign = TextAlign.Start,
                     color = Black,
-                    fontSize = 20.sp,
+                    fontSize = getNonScalableFontSize(text20),
                     fontFamily = inter,
                     fontWeight = FontWeight.W500,
                     modifier = Modifier.padding(top = 611.dp, start = 16.dp)
@@ -177,7 +184,7 @@ private fun TodayOfferItem(donut: Donuts){
                 text = donut.title,
                 textAlign = TextAlign.Center,
                 color = Black,
-                fontSize = 16.sp,
+                fontSize = getNonScalableFontSize(text16),
                 fontFamily = inter,
                 fontWeight = FontWeight.W400,
                 modifier = Modifier.padding(top = 205.dp, start = 20.dp)
@@ -186,7 +193,7 @@ private fun TodayOfferItem(donut: Donuts){
                 text = donut.description,
                 textAlign = TextAlign.Start,
                 color = Black60pre,
-                fontSize = 12.sp,
+                fontSize = getNonScalableFontSize(text12),
                 fontFamily = inter,
                 fontWeight = FontWeight.W300,
                 maxLines = 3,
@@ -197,7 +204,7 @@ private fun TodayOfferItem(donut: Donuts){
                 text = donut.price,
                 textAlign = TextAlign.Center,
                 color = Black,
-                fontSize = 22.sp,
+                fontSize = getNonScalableFontSize(text22),
                 fontFamily = inter,
                 fontWeight = FontWeight.W500,
                 modifier = Modifier.padding(top = 283.dp, start = 138.dp)
@@ -206,7 +213,7 @@ private fun TodayOfferItem(donut: Donuts){
                 text = donut.oldPrice,
                 textAlign = TextAlign.Center,
                 color = Black60pre,
-                fontSize = 14.sp,
+                fontSize = getNonScalableFontSize(text14),
                 fontFamily = inter,
                 fontWeight = FontWeight.W500,
                 modifier = Modifier.padding(top = 291.dp, start = 105.dp).drawBehind {
@@ -301,7 +308,7 @@ private fun DonutsPriceItem(donut: Donuts){
                 text = donut.title,
                 textAlign = TextAlign.Center,
                 color = Black60pre,
-                fontSize = 14.sp,
+                fontSize = getNonScalableFontSize(text14),
                 fontFamily = inter,
                 fontWeight = FontWeight.W400,
             )
@@ -309,7 +316,7 @@ private fun DonutsPriceItem(donut: Donuts){
                 text = donut.price,
                 textAlign = TextAlign.Center,
                 color = DarkPink,
-                fontSize = 14.sp,
+                fontSize = getNonScalableFontSize(text14),
                 fontFamily = inter,
                 fontWeight = FontWeight.W500,
             )
