@@ -28,6 +28,7 @@ import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.android.gonutswithdonuts.R
@@ -103,14 +104,8 @@ private fun TodayOfferItem(donut: Donuts){
                 fontSize = getNonScalableFontSize(text14),
                 fontFamily = inter,
                 fontWeight = FontWeight.W500,
-                modifier = Modifier.padding(top = 291.dp, start = 105.dp).drawBehind {
-                    drawLine(
-                        color = Black60pre,
-                        start = Offset(0f, 25f),
-                        end = Offset(size.width, 25f),
-                        strokeWidth = 3f
-                    )
-                }
+                textDecoration = TextDecoration.LineThrough,
+                modifier = Modifier.padding(top = 291.dp, start = 105.dp)
             )
         }
         Image(
