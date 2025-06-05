@@ -20,7 +20,11 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.NavigationBarItem
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -52,33 +56,49 @@ import com.android.gonutswithdonuts.ui.theme.text30
 
 @Composable
 fun Home(){
-    Box{
+    Scaffold(
+        topBar = { TopAppBar() },
+        bottomBar = { BottomBar() },
+        containerColor = White,
+    ) { paddingValues ->
+        Column(modifier = Modifier.padding(paddingValues))
+        {
+            Column{
+                Box(
+                    modifier = Modifier.fillMaxSize().background(color = White).verticalScroll(rememberScrollState())
+                ){
+                    Text(
+                        text = "Today Offers",
+                        textAlign = TextAlign.Start,
+                        color = Black,
+                        fontSize = getNonScalableFontSize(text20),
+                        fontFamily = inter,
+                        fontWeight = FontWeight.W500,
+                        modifier = Modifier.padding(top = 71.dp, start = 16.dp)
+                    )
+                    TodayOffersList(Modifier.padding(top = 120.dp, start = 16.dp))
+                    Text(
+                        text = "Donuts",
+                        textAlign = TextAlign.Start,
+                        color = Black,
+                        fontSize = getNonScalableFontSize(text20),
+                        fontFamily = inter,
+                        fontWeight = FontWeight.W500,
+                        modifier = Modifier.padding(top = 491.dp, start = 16.dp)
+                    )
+                    DonutsPriceList(Modifier.padding(top = 532.dp, start = 16.dp))
+                }
+            }
+        }
+    }
+    /*Box{
         Column (
             Modifier.padding(bottom = 67.dp)
         ){
             Box(
                 modifier = Modifier.fillMaxSize().background(color = White).verticalScroll(rememberScrollState())
             ){
-                Text(
-                    text = "Let’s Gonuts!",
-                    textAlign = TextAlign.Start,
-                    color = DarkPink,
-                    fontSize = getNonScalableFontSize(text30),
-                    fontFamily = inter,
-                    fontWeight = FontWeight.W500,
-                    modifier = Modifier.padding(top = 81.dp, start = 16.dp)
-                )
-                Text(
-                    text = "Order your favourite donuts from here",
-                    textAlign = TextAlign.Start,
-                    color = Black60pre,
-                    fontSize = getNonScalableFontSize(text14),
-                    fontFamily = inter,
-                    fontWeight = FontWeight.W400,
-                    modifier = Modifier.padding(top = 120.dp, start = 16.dp)
-                )
-                SearchButton(Modifier.padding(top = 84.dp, start = 321.dp))
-
+                TopAppBar()
                 Text(
                     text = "Today Offers",
                     textAlign = TextAlign.Start,
@@ -135,6 +155,33 @@ fun Home(){
                 modifier = Modifier.size(35.dp)
             )
         }
+    }*/
+}
+
+@Composable
+private fun TopAppBar(){
+    Box(
+        Modifier.padding(bottom = 20.dp)
+    ){
+        Text(
+            text = "Let’s Gonuts!",
+            textAlign = TextAlign.Start,
+            color = DarkPink,
+            fontSize = getNonScalableFontSize(text30),
+            fontFamily = inter,
+            fontWeight = FontWeight.W500,
+            modifier = Modifier.padding(top = 81.dp, start = 16.dp)
+        )
+        Text(
+            text = "Order your favourite donuts from here",
+            textAlign = TextAlign.Start,
+            color = Black60pre,
+            fontSize = getNonScalableFontSize(text14),
+            fontFamily = inter,
+            fontWeight = FontWeight.W400,
+            modifier = Modifier.padding(top = 120.dp, start = 16.dp)
+        )
+        SearchButton(Modifier.padding(top = 84.dp, start = 321.dp))
     }
 }
 
@@ -147,9 +194,10 @@ private fun SearchButton(modifier: Modifier){
             .shadow(0.5.dp, shape = RoundedCornerShape(10.dp),clip = false)
             .background(color = Background, shape = RoundedCornerShape(10.dp))
     ) {
-        Image(
+        Icon(
             painter = painterResource(R.drawable.round_search),
             contentDescription = null,
+            tint = DarkPink,
             )
     }
 }
@@ -246,9 +294,10 @@ private fun FavoriteButton(modifier: Modifier){
             .shadow(0.5.dp, shape = CircleShape,clip = false)
             .background(color = White, shape = CircleShape)
     ) {
-        Image(
+        Icon(
             painter = painterResource(R.drawable.round_heart),
             contentDescription = null,
+            tint = DarkPink,
             modifier = Modifier.size(20.dp)
             )
     }
@@ -322,6 +371,74 @@ private fun DonutsPriceItem(donut: Donuts){
         }
 
 
+    }
+}
+
+@Composable
+private fun BottomBar(){
+    NavigationBar(
+        containerColor = White
+    ){
+        NavigationBarItem(
+            selected = false,
+            onClick = { },
+            icon = {
+                Icon(
+                    painter = painterResource(R.drawable.round_home),
+                    contentDescription = null,
+                    tint = DarkPink,
+                    modifier = Modifier.size(35.dp)
+                )
+            }
+        )
+        NavigationBarItem(
+            selected = false,
+            onClick = { },
+            icon = {
+                Icon(
+                    painter = painterResource(R.drawable.round_heart),
+                    contentDescription = null,
+                    tint = DarkPink,
+                    modifier = Modifier.size(35.dp)
+                )
+            }
+        )
+        NavigationBarItem(
+            selected = false,
+            onClick = { },
+            icon = {
+                Icon(
+                    painter = painterResource(R.drawable.round_notification),
+                    contentDescription = null,
+                    tint = DarkPink,
+                    modifier = Modifier.size(35.dp)
+                )
+            }
+        )
+        NavigationBarItem(
+            selected = false,
+            onClick = { },
+            icon = {
+                Icon(
+                    painter = painterResource(R.drawable.round_buy),
+                    contentDescription = null,
+                    tint = DarkPink,
+                    modifier = Modifier.size(35.dp)
+                )
+            }
+        )
+        NavigationBarItem(
+            selected = false,
+            onClick = { },
+            icon = {
+                Icon(
+                    painter = painterResource(R.drawable.round_info),
+                    contentDescription = null,
+                    tint = DarkPink,
+                    modifier = Modifier.size(35.dp)
+                )
+            }
+        )
     }
 }
 
