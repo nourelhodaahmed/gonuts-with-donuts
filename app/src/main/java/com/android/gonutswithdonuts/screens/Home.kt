@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -37,7 +36,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.android.gonutswithdonuts.R
-import com.android.gonutswithdonuts.data.Donuts
+import com.android.gonutswithdonuts.entity.Donuts
 import com.android.gonutswithdonuts.data.donutsPriceData
 import com.android.gonutswithdonuts.data.todayOffersData
 import com.android.gonutswithdonuts.ui.theme.Background
@@ -47,7 +46,7 @@ import com.android.gonutswithdonuts.ui.theme.inter
 
 @Composable
 fun Home(){
-    Box(){
+    Box{
         Column (
             Modifier.padding(bottom = 67.dp)
         ){
@@ -130,9 +129,7 @@ fun Home(){
                 modifier = Modifier.size(35.dp)
             )
         }
-
     }
-
 }
 
 @Composable
@@ -321,7 +318,6 @@ private fun DonutsPriceItem(donut: Donuts){
 
     }
 }
-
 
 @Preview(showBackground = true)
 @Composable

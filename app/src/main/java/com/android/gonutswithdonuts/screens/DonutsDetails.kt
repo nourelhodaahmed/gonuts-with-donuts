@@ -71,7 +71,6 @@ fun DonutsDetails(){
             )
         }
     }
-
 }
 
 @Composable
@@ -83,9 +82,7 @@ private fun ContentDescription(){
             .background(color = White, shape = RoundedCornerShape(topEnd = 40.dp, topStart = 40.dp))
             .padding(40.dp)
     ){
-        Column (
-            //modifier = Modifier.verticalScroll(rememberScrollState())
-        ){
+        Column{
             Text(
                 text = "Strawberry Wheel",
                 textAlign = TextAlign.Start,
