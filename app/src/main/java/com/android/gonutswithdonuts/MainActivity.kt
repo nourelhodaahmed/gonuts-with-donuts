@@ -13,8 +13,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Starter()
-            //DonutsDetails()
+            //Starter()
+            DonutsDetails()
             //Home()
         }
     }
